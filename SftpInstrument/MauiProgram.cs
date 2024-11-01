@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Hosting;
 
 namespace SftpInstrument;
 
@@ -19,6 +22,8 @@ public static class MauiProgram
         builder.Logging.AddDebug();
 #endif
 
-        return builder.Build();
+        var mauiApp = builder.Build();
+        ServiceHelper.Initialize(mauiApp.Services);
+        return mauiApp;
     }
 }

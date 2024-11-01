@@ -1,4 +1,6 @@
-﻿namespace SftpInstrument;
+﻿using Microsoft.Maui.Controls;
+
+namespace SftpInstrument;
 
 public partial class App : Application
 {

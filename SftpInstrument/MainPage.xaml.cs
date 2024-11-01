@@ -1,4 +1,8 @@
-﻿namespace SftpInstrument;
+﻿using System;
+using Microsoft.Maui.Accessibility;
+using Microsoft.Maui.Controls;
+
+namespace SftpInstrument;
 
 public partial class MainPage : ContentPage
 {
